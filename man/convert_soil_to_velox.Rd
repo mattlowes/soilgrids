@@ -7,7 +7,7 @@
 convert_soil_to_velox(raster_list)
 }
 \arguments{
-\item{soil_raster}{a raster of soil data from the soil grids repository to be converted to raster for extraction}
+\item{raster_list}{a raster of soil data from the soil grids repository to be converted to raster for extraction}
 }
 \value{
 a velox raster version of the soil data for extraction
@@ -16,5 +16,5 @@ a velox raster version of the soil data for extraction
 Converts soil raster to velox
 }
 \examples{
-convert_soil_to_velox(list("ph_soil_layer.tif". "n_soil_layer.tif"))
+\dontrun{convert_soil_to_velox(list("ph_soil_layer.tif", "n_soil_layer.tif"))}
 }

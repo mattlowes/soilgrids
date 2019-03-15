@@ -4,16 +4,16 @@
 \alias{get_soil_data}
 \title{Executes the full soil extraction process}
 \usage{
-get_soil_data(df, lon_col = NULL, lat_col = NULL, country_iso,
+get_soil_data(df, lat_col = NULL, lon_col = NULL, country_iso,
   soil_layers = c("ph", "carbon", "soil_texture", "sand", "silt", "clay",
   "CEC", "p", "n"), raw_data_directory, country_polygon_directory)
 }
 \arguments{
 \item{df}{set of GPS points for which the user wants an export}
 
-\item{lon_col}{the longitude column in the data}
-
 \item{lat_col}{the latitude column in the data}
+
+\item{lon_col}{the longitude column in the data}
 
 \item{country_iso}{The country in which these points are located to trim down the data.}
 
@@ -31,10 +31,18 @@ The original spdf data frame along with the extracted soil layers.
 Executes the full soil extraction process
 }
 \note{
-This function assumes the data remain named what they are when they're down loaded from the soil grids website.
+This function assumes the data remain named what they are when they're down loaded from the soil grids website. The units for the soil parameters
+are available on the repo website, https://github.com/one-acre-fund/soilgrids, as well as listed out here:
+pH - standard pH scale.
+Carbon (SOC) - g/kg.
+Nitrogen - mg/kg.
+Phosphorous - mg/kg.
+CEC - cmolc/kg.
+sand, silt, clay - %w (percent of weight)
+country_iso = c("KEN", "RWA", "BDI", "TZA", "UGA", "ZMB", "MWI", "ETH", "IND", "NGA")
 }
 \examples{
-get_soil_data(spdf = gps.data, country.iso = "KEN", raw_data_directory, country_polygon_directory)
-country_iso = c("KEN", "RWA", "BDI", "TZA", "UGA", "ZMB", "MWI", "ETH", "IND", "NGA")
-
+\dontrun{get_soil_data(spdf = gps.data,
+country.iso = "KEN", raw_data_directory,
+country_polygon_directory)}
 }

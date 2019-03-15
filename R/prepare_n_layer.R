@@ -3,6 +3,8 @@
 #'
 #' @param raw_data_directory the location of the file. This should be the in the
 #'   same place as the other raw data.
+#' @param forceUpdate boolean to determine if we have to refresh the whole procedure or just
+#' load the previous version.
 #' @return a vector of the file names to get from the data_directory
 #' @note I'll do this once for P and for N so that we don't have to reproject
 #'   the data each time. This will be done in the background once and saved and
@@ -11,7 +13,7 @@
 #'   There's no input for the function because it executes a standard data
 #'   transformation.
 #' @examples
-#' layers_to_files(c("carbon", "CEC"))
+#' \dontrun{layers_to_files(c("carbon", "CEC"))}
 
 
 prepare_n_layer <- function(raw_data_directory, forceUpdate){

@@ -8,17 +8,20 @@ Description: This package accesses saved soil grids data, trims down the values 
     and extracts soil values for given GPS points. Future versions of the package will expand to working with 
     spatial polygons.
 Imports: 
-    sp, 
-    rgdal, 
-    raster,
-    velox,
-    tidyverse,
-    assertthat,
-    arc2weather
-License: What license is it under?
+    sp (>= 1.3.1),
+    rgdal (>= 1.3.6),
+    raster (>= 2.8.4),
+    velox (>= 0.2.0),
+    tidyverse (>= 1.2.1),
+    dplyr (>= 0.8.0.1),
+    assertthat (>= 0.2.0),
+    arc2weather (>= 0.0.0.9000),
+    magrittr,
+    rlang
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
-    testthat
+    testthat (>= 2.0.1)
 RoxygenNote: 6.1.1
 Remotes: github::one-acre-fund/arc2weather

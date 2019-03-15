@@ -7,7 +7,11 @@
 intersect_map_and_points(spdf, country_iso, data_directory)
 }
 \arguments{
+\item{spdf}{SpatialPointsDataFrame to intersect with the polygons}
+
 \item{country_iso}{The country iso code to indicate which country the GPS points are in to know how to trim the data}
+
+\item{data_directory}{the location of the polygon files}
 }
 \value{
 velox raster cropped to the area where soil points are
@@ -16,5 +20,5 @@ velox raster cropped to the area where soil points are
 Create intersected map to use to crop velox rasters.
 }
 \examples{
-apply_soil_weights("ph_soil_layer.tif")
+\dontrun{apply_soil_weights("ph_soil_layer.tif")}
 }

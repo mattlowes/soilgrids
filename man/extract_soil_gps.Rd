@@ -7,9 +7,11 @@
 extract_soil_gps(velox_raster, spdf, soil_layers)
 }
 \arguments{
+\item{velox_raster}{A list of velox raster from which to extract values}
+
 \item{spdf}{A SpatialPointsDataFrame of the GPS for which we'll be extracting data from the velox raster.}
 
-\item{veloxRaster}{A list of velox raster from which to extract values}
+\item{soil_layers}{the names of the variables being extracted. These are applied to the extracted values.}
 }
 \value{
 A list of velox raster extracts with one point per lon/lat in the spdf
@@ -18,5 +20,5 @@ A list of velox raster extracts with one point per lon/lat in the spdf
 Extracts values for GPS df from soil velox raster
 }
 \examples{
-extract_soil_gps(raster_list, SpatialPointsDataFrame, c("ph", "n"))
+\dontrun{extract_soil_gps(raster_list, SpatialPointsDataFrame, c("ph", "n"))}
 }
